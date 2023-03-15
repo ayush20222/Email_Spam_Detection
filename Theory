@@ -1,0 +1,43 @@
+EMAIL SPAM DETECTION PROJECT
+
+The Spam email detection project uses the Natural Language Processing(NLP) techniques to train the model to recognise the spam emails from the not spam ones.
+The project uses NAIVE BAYES APPROACH algorithm to do the Spam detection.
+
+Libraries included:
+
+NATURAL LANGUAGE TOOLKIT(NLTK):
+This is the main overarching library from which we use the functions such as Tokenise, Stop Words, Stemming .  
+SCIKIT LEARN:
+This library is used for feature extraction, Label Encoding, Vectorisation.
+NUMPY:
+This is the simple library framework that is utilise for generating the array and the matrix generation
+PANDAS:
+The Pandas library is used for providing the high speed and efficient data structure capabilities.
+
+
+ALGORITHM TECHNIQUES USED:
+Converting Everything into Lower Case.
+TOKENISATION:
+One of the very basic things we want to do is dividing a body of text into words or sentences. This is called tokenisation. This technique breaks down the entire document into smaller sentences then those sentences are further broken down into words. This process uses the “REGXPTOKENISER”, which creates an elegant LIST containing the individual words.
+
+STOP WORDS REMOVAL: 
+The above tokenised list still contains some unwanted words which do not help in the slightest in teaching the model or serve any purpose whatsoever in deciding or categorising the data into SPAM and NOT SPAM. So these stop words such as “AND ”, “IT”,”A”,”THE”,etc. needs to be removed from the list. For this purpose we use the Stop Word function from nltk.corpus , this saves a lot of time and computational power and resources that could be wasted on these.
+
+STEMMING:
+This is one more such important technique used for cleaning the data. This is used to convert the various forms of a word into its original root(“stem”) form.
+E.g play, playing, plays all convey the same meaning but occur multiple times thus reducing all these words to a simple “PLAY”  will save us a lot of time and resources. NLTK provides various such functions we preferred to use PORTERSTEMMER, because of the simple usage and extensive library support.
+
+FEATURE EXTRACTION: 
+Now in this step we basically prepare the VECTOR using CountVectoriser function thus converting the textual data into numeral form thus much more easy to deal with. This is done in order to make the vector corpus which then is used for Vocabulary creation.
+
+VOCABULARY CREATION: 
+This is the most important step in which we create a vocabulary from the dataset which will be later used to train the model and then can be used to predict the new and upcoming emails that needs to be classified this uses the “fit_transform” function thus creating the vocabulary from the stemmed data. IT uses “train_test_split”.
+USING NAIVE BAYES FOR IMPLEMENTATION:
+The Naive Bayes approach is a simple and probabilistic algorithm that is used for classifying whether certain events have occurred given the fact that other events pertaining to it have already occurred it is called NAIVE  because of the simple reasons it takes naive approach of neglecting the scores of other probability.
+
+It is provided by SKLEARN library. Now the prediction is checked.
+
+ 
+
+
+
